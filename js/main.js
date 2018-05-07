@@ -1,4 +1,5 @@
 //what variables do we need to save
+//program state
 let userInputColor;
 let currentColor;
 let score = 0;
@@ -100,6 +101,16 @@ const colors = [
     b: 223,
     },
 ];
+
+// jQuery Dom References
+const $totalScore = $('.total-score-amt');
+const $colorName = $('.color-name');
+const $colorInput = $('#color-picker');
+const $submitColorButton = $('.submit-color-button');
+
+$totalScore.html(score);
+
+
 //what functions might need
 
 //what events might we need
