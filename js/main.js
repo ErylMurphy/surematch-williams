@@ -37,7 +37,6 @@ const colors = [
     b: 77,
     },
 {
-
     colorName: 'Dirty Martini',
     r: 221,
     g: 208,
@@ -48,7 +47,7 @@ const colors = [
     colorName: 'Dress Blues',
     r: 43,
     g: 67,
-    b: 130
+    b: 130,
 },
 {
 
@@ -89,7 +88,7 @@ const colors = [
     b: 203,
   },
 {
-    colorname: 'Luxurious red',
+    colorName: 'Luxurious red',
     r: 134,
     g: 58,
     b: 66,
@@ -100,6 +99,12 @@ const colors = [
     g: 203,
     b: 223,
     },
+{
+    colorName: 'Knitting Needles',
+    r: 195, 
+    g: 193, 
+    b: 188, 
+}
 ];
 
 // jQuery Dom References
@@ -119,6 +124,26 @@ function playRound() {
 }
 
 playRound();
+
+$submitColorBtn.click(function(){
+    const hexInput = $colorInput.val();
+    console.log('selected!');
+    console.log(hexToRgb(hexInput));
+    userInputColor = hexToRgb(hexInput);
+    
+
+    console.log(hexInput);
+})
+//sourced from https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16)
+    } : null;
+}
+
 
 //what functions might need
 
