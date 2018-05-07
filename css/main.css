@@ -1,0 +1,10 @@
+body {
+
+}
+
+.result-row {
+    display: flex;
+}
+.result-column {
+    width: 50%;
+}

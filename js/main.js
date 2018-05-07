@@ -4,6 +4,8 @@ let userInputColor;
 let currentColor;
 let score = 0;
 let currentColorValDiff;
+const $guessColorTxt = $('.guess-color-txt');
+const $actualColorTxt = $('.actual-color-txt');
 //what should your data structure be for colors
 const colors = [
     {
@@ -130,7 +132,7 @@ $submitColorBtn.click(function(){
     console.log('selected!');
     console.log(hexToRgb(hexInput));
     userInputColor = hexToRgb(hexInput);
-    
+    $guessColorTxt.html(`You guessed rgb(${userInputColor.r}, ${ userInputColor.g }, ${ userInputColor.b})`);
 
     console.log(hexInput);
 })
