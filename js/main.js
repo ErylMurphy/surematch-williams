@@ -106,10 +106,19 @@ const colors = [
 const $totalScore = $('.total-score-amt');
 const $colorName = $('.color-name');
 const $colorInput = $('#color-picker');
-const $submitColorButton = $('.submit-color-button');
+const $submitColorBtn = $('.submit-color-btn');
 
 $totalScore.html(score);
 
+function playRound() {
+    console.log(colors);
+    currentColor = colors.splice(Math.floor(Math.random() * colors.length), 1)[0];
+    console.log(currentColor);
+    
+    $colorName.html(currentColor.colorName);
+}
+
+playRound();
 
 //what functions might need
 
